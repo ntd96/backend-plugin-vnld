@@ -4,8 +4,7 @@ function getToken($email, $password)
 {
     // URL của endpoint xác thực
     $auth_url = 'https://eshop.bizfly.vn/api/login'; 
-
-    // Dữ liệu gửi đi, ví dụ: thông tin đăng nhập
+    $eshop_token = '0fefd045-7c01-480e-8412-797a6121862d';
     $data = array(
         'email' => $email, 
         'password' => $password,

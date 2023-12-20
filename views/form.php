@@ -5,7 +5,7 @@
     <input type="submit" value="Submit">
 </form>
 
-<script>
+<!-- <script>
     function submitForm(event) {
         event.preventDefault();
 
@@ -30,9 +30,7 @@
                 console.error('Error:', error);
             });
     }
-</script>
-
-
+</script> -->
 
 <?php
 function console_log($data)
@@ -44,7 +42,12 @@ function console_log($data)
 }
 
 // Xử lý dữ liệu từ POST request nếu có
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['address'])) {
+if (
+    $_SERVER["REQUEST_METHOD"] == "POST"
+    && isset($_POST['name'])
+    && isset($_POST['email'])
+    && isset($_POST['address'])
+) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $address = $_POST['address'];
